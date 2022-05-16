@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StopWatch</title>
+    <link rel="icon" href="icons/timer.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="TimerAppBackground">
+        <!-- Adding Background Video -->
+        <video loop id="RelaxMusic">
+            <source src="videos/RelaxMusic.mp4" type="video/mp4">
+        </video>
+
+        <!-- Adding StopWatch by using bootstrap libraries (classes)-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center mt-5">
+                    <h1 id="display" class="text-center m-5">
+                        <span id="timer">00:00:00:00</span>
+                    </h1>
+                    <div class="d-flex flex-wrap justify-content-evenly">
+                        <!-- Using Bootstrap Button success warning and danger for green yellow and red symbol -->
+                        <!-- m: margin; w:width -->
+                        <button onclick="startTimer()" id="start" class="btn btn-success m-3 w-25">Start</button>
+                        <button onclick="stopTimer()" class="btn btn-warning m-3 w-25">Stop</button>
+                        <button onclick="resetTimer()" class="btn btn-danger m-3 w-25">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
