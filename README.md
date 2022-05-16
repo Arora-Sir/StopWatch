@@ -7,8 +7,8 @@ This is a stopwatch project meant to start and stop the timer according to the u
 - Reset Button resets the timer to 00:00:00.
 
 # Important links
-- Hosting Link: 
-- Explaination Link: 
+- Hosting Link: https://arora-sir.github.io/StopWatch/
+- Explaination Link: https://user-images.githubusercontent.com/29508236/168665507-8ac10f7f-bde2-4e60-84d5-8eed25b353b3.mp4
 
 # Tech stack used
 - HTML: It is the basic structure of the app
@@ -17,3 +17,4 @@ This is a stopwatch project meant to start and stop the timer according to the u
 
 # Important Screenshots
 - Homepage: ![Screenshot 17-05-22 00;25;11](https://user-images.githubusercontent.com/29508236/168662656-71e71ee9-1d63-441f-a796-c93ced0745f6.jpg)
+
