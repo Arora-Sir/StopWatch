@@ -50,7 +50,7 @@ var timer = () => {
     Hours++
   }
 
-  //Checking the Edge case when timer ends
+  //Checking the Edge case when timer ends (i.e at 99:59:59)
   if (Hours >= 99 && Minutes >= 59 && Seconds >= 59) {
     isTimerEnds = true
     Hours = Minutes = Seconds = milliSeconds = 0
