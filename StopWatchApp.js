@@ -1,7 +1,6 @@
 //Taking ID's of every html element
 var vid = document.getElementById('RelaxMusic')
-var display = document.getElementById('timer')
-var displayMs = document.getElementById('milliSeconds')
+var displayTimer = document.getElementById('displayTimer')
 
 //Setting value to zero/null as default value when page
 var Hours = (Minutes = Seconds = milliSeconds = 0)
@@ -20,6 +19,7 @@ var startTimer = () => {
 var stopTimer = () => {
   clearInterval(startTime)
   if (!isTimerEnds) {
+    //don't stop the video if timer meets the edge case scenario (i.e when timer reaches 99:99:99)
     vid.pause()
   }
   startTime = false
@@ -29,13 +29,13 @@ var stopTimer = () => {
 var resetTimer = () => {
   vid.pause()
   Hours = Minutes = Seconds = milliSeconds = 0
-  display.innerHTML = settingTime()
+  displayTimer.innerHTML = settingTime()
   stopTimer()
 }
 
 //Main function to increase the timer in realtime
 var timer = () => {
-  display.innerHTML = settingTime()
+  displayTimer.innerHTML = settingTime()
   milliSeconds++
   if (milliSeconds == 100) {
     milliSeconds = 0
