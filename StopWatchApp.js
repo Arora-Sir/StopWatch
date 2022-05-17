@@ -34,17 +34,17 @@ var stopTimer = () => {
 var resetTimer = () => {
   clearInterval(startTime)
   vid.pause()
-  start.innerHTML = 'Start'
   Hours = Minutes = Seconds = milliSeconds = 0
   displayTimer.innerHTML = settingTime()
   stopTimer()
+  start.innerHTML = 'Start'
 }
 
 //Main function to increase the timer in realtime
 var timer = () => {
   displayTimer.innerHTML = settingTime()
-  //1000 ms = 1s (Hence, calling this timer function every 100ms means if we occurred this function 10 times, then 100*10 = 1000ms = 1s)
-  milliSeconds++
+  //1000 ms = 1s (Hence, calling this timer function every 10ms means: if we occurred this function 100 times, then 10*100 = 1000ms = 1s)
+  milliSeconds += 1
   if (milliSeconds == 100) {
     milliSeconds = 0
     Seconds++
