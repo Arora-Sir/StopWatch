@@ -6,7 +6,8 @@ This is a stopwatch project meant to start and stop the timer according to the u
 - Stop button pause the ongoing timer.
 - Reset Button resets the timer to 00:00:00.
 - Background video will start and stop too according to the stopwatch timer running or not.
-- When the timer reaches its limit (i.e at 99:59:59), all buttons will set to "reset" buttons.
+- Only if we have already started the timer, and then click on stop button, then "Start" text will change to "Resume" text.
+- When the timer reaches its limit (i.e at 99:59:59), all buttons will set to "Reset" buttons.
 
 # Important links
 - Hosting Link: https://arora-sir.github.io/StopWatch/
