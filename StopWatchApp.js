@@ -8,24 +8,40 @@ var reset = document.getElementById('reset')
 //Setting value to zero/null as default value when page
 var Hours = (Minutes = Seconds = milliSeconds = 0)
 var startTime = false
-var isTimerEnds = false
+var isTimerEnds = (resetBtnClicked = false)
 
 //Start the watch
 var startTimer = () => {
-  if (startTime == false) {
-    clearInterval(startTime)
+  if (isTimerEnds) {
+    resetTimer()
+    isTimerEnds = false
+    resetBtnClicked = false
+  } else if (!isTimerEnds) {
+    if (startTime == false) {
+      clearInterval(startTime)
+      vid.play()
+      startTime = setInterval(timer, 10)
+    }
   }
-  vid.play()
-  startTime = setInterval(timer, 10)
 }
 
 //Stop the watch
 var stopTimer = () => {
   clearInterval(startTime)
-  start.innerHTML = 'Resume'
+  if (startTime) {
+    start.innerHTML = 'Resume'
+  }
   if (!isTimerEnds) {
     //don't stop the video if timer meets the edge case scenario (i.e when timer reaches 99:99:99)
     vid.pause()
+    stop.innerHTML = 'Stop'
+  } else if (isTimerEnds && resetBtnClicked) {
+    resetTimer()
+  } else if (isTimerEnds) {
+    start.innerHTML = 'Reset'
+    stop.innerHTML = 'Reset'
+    reset.innerHTML = 'Reset'
+    resetBtnClicked = true
   }
   startTime = false
 }
@@ -33,11 +49,17 @@ var stopTimer = () => {
 //Reset the Timer
 var resetTimer = () => {
   clearInterval(startTime)
+  if (isTimerEnds) {
+    resetBtnClicked = true
+    isTimerEnds = false
+  } else {
+    resetBtnClicked = false
+  }
   vid.pause()
   Hours = Minutes = Seconds = milliSeconds = 0
   displayTimer.innerHTML = settingTime()
-  stopTimer()
   start.innerHTML = 'Start'
+  stop.innerHTML = 'Stop'
 }
 
 //Main function to increase the timer in realtime
