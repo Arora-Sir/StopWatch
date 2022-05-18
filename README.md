@@ -1,10 +1,12 @@
-# StopWatch : FrontEnd Project (Coding Ninjas)
+# StopWatch : FrontEnd Project
 
 # Features Added
 This is a stopwatch project meant to start and stop the timer according to the users need
 - Start button starts the timer.
 - Stop button pause the ongoing timer.
 - Reset Button resets the timer to 00:00:00.
+- Background video will start and stop too according to the stopwatch timer running or not.
+- When the timer reaches its limit (i.e at 99:59:59), all buttons will set to "reset" buttons.
 
 # Important links
 - Hosting Link: https://arora-sir.github.io/StopWatch/
