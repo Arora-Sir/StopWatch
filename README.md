@@ -15,6 +15,6 @@ This is a stopwatch project meant to start and stop the timer according to the u
 - CSS: To make project beautiful
 - JS: It takes care of all the functionalities.
 
-# Important Screenshots
+# Screenshot
 - Homepage: ![Screenshot 17-05-22 00;25;11](https://user-images.githubusercontent.com/29508236/168662656-71e71ee9-1d63-441f-a796-c93ced0745f6.jpg)
 
